@@ -1,0 +1,2 @@
+azul    0   =   no esta enfermo 
+rojo    1   =   enfermo

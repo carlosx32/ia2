@@ -1,7 +1,7 @@
 /* libros.pro
     juego de identificacion de libros:
     para iniciar use : ?- iniciar.
-    si desea ingresar nuevos libros use : ?- nuevo.    
+    si desea ingresar nuevos libros use : ?- nuevo.
     */
 dynamic libro/3.
 libro(el_gato_negro,cuento_de_terror,edgar_allan_poe).
@@ -41,8 +41,8 @@ genero(novela_aventura)     :-novela_aventura,!.
 genero(novela_de_guerra)    :-novela_de_guerra,!.
 genero(cuento_infantil)     :-cuento_infantil, !.
 genero(cuento_terror)       :-cuento_infantil, !.
-genero(poesia_latina)       :-poesia_latina,!. 
-genero(poesia_europea)       :-poesia_europea,!. 
+genero(poesia_latina)       :-poesia_latina,!.
+genero(poesia_europea)       :-poesia_europea,!.
 genero(matematicas)         :-matematicas,!.
 
 genero(desconocido).             /* no diagnosisticado */
@@ -101,4 +101,4 @@ undo :- retract(no(_)),fail.
 undo.
 ver_libros(Genero):- findall((X,Y),(libro(X,Genero,Y)),O),nl,show_libros(O).
 show_libros([]).
-show_libros([(A,B)|C]):- write("Libro: "),write(A), write("Autor: "), write(B),nl,show_libros(C). 
+show_libros([(A,B)|C]):- write("Libro: "),write(A), write(" Autor: "), write(B),nl,show_libros(C).
