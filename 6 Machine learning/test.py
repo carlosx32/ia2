@@ -1,6 +1,6 @@
 import csv
-from test import *
-#from arbolKD import *
+#from test import *
+from reglas import *
 
 def escribir(ejemplo,resultado):
     print(ejemplo[0]," ",resultado, " acerto :", comparar(ejemplo,resultado))
@@ -19,7 +19,7 @@ def reescritura(ejemplos):
         
         escribir(ejemplo,resultado)
         
-    print("aciertos: ",contador,"Total datos: ",len(ejemplos)  )
+    print("aciertos: ",contador,"Total datos: ",len(ejemplos), "Porcentaje da aciertos", contador/len(ejemplos)*100,"%"  )
     
     
     

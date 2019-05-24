@@ -1,4 +1,3 @@
-
 def evaluar(ejemplo):
     fo=float(ejemplo[1])
     fhi= float(ejemplo[2])

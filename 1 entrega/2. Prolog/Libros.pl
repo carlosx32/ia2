@@ -17,7 +17,8 @@ libro(corazon_delator,cuento_de_terror,edgar_allan_poe).
 libro(relato_de_sergio_stepansky,poesia_latina,leon_de_greif).
 libro(mo_va_mo_vene,poesia_europea,eduardo_di_capua).
 libro(philosophiae_naturalis_principia_mathematica,matematicas,isaac_newton).
-
+libro(dr_jkill_y_mrhyde,novela_de_asesinato,robert_l_stivenson).
+libro(atlas_de_anatomia_humana,anatomia,frank_h_netter).
 
 
 nuevo :-    nl,write("inserte el Nombre de libro:" ), read(Nombre),nl,
@@ -36,6 +37,7 @@ iniciar :- genero(Genero),
 
 /* hypotheses to be tested */
 genero(novela_de_terror)    :-novela_de_terror, !.
+genero(novela_de_asesinato)    :-novela_de_asesinato, !.
 genero(novela_de_amor)      :-novela_de_amor, !.
 genero(novela_aventura)     :-novela_aventura,!.
 genero(novela_de_guerra)    :-novela_de_guerra,!.
@@ -44,9 +46,12 @@ genero(cuento_terror)       :-cuento_infantil, !.
 genero(poesia_latina)       :-poesia_latina,!.
 genero(poesia_europea)       :-poesia_europea,!.
 genero(matematicas)         :-matematicas,!.
+genero(anatomia)         :-anatomia,!.
+
 
 genero(desconocido).             /* no diagnosisticado */
 /* animal identification rules */
+novela_de_asesinato :- novela,verificar(te_interesan_los_crimenes).
 novela_de_terror    :-novela,verificar(leer_historias_que_provoquen_miedo),verificar(asustarse).
 novela_de_amor      :-novela,poesia,verificar(leer_historias_de_amor).
 novela_de_amor      :-novela,verificar(eres_una_persona_romantica).
@@ -55,15 +60,18 @@ novela_de_guerra    :-novela,verificar(leer_historias_belicas).
 novela_aventura :-novela, verificar(leer_historias_con_aventuras).
 novela_aventura :-novela, verificar(leer_historias_de_suspenso).
 cuento_infantil     :-cuento,verificar(su_edad_es_menor_a_13_años).
+cuento_infaltil     :- cuento,verificar(busca_algo_que_leerle_a_su_hijo).
 cuento_terror       :-  cuento, verificar(leer_historias_que_provoquen_miedo).
 poesia_latina       :- poesia,verificar(leer_literatura_latinoamericana).
 poesia_europea      :-poesia,verificar(leer_literatura_europea).
 matematicas         :-estudio, verificar(estudiar_matematicas).
+anatomia            :-estudio,verificar(investigar),verificar(conocer_sobre_el_cuerpo_humano).
 
 
 /* Reglas de clasificacion */
 
 novela  :-  verificar(leer_historias_largas), !.
+novela  :-  verificar(historias_separadas_por_capitulos),!.
 cuento  :-  verificar(leer_historias_cortas), !.
 poesia  :-  verificar(leer_historias_inspiradas_por_sentimientos),!.
 poesia  :-  verificar(leer_versos), verificar(leer_rimas),verificar(lecturas_con_diferentes_significados),!.

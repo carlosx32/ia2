@@ -1,0 +1,1451 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3">
+        <rdfs:comment>Una ontología para platos típicos</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#acompañaA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#acompañaA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esIngredienteDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esIngredienteDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esIngredienteDe">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esIngredienteDe"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esPrincipalDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esPrincipalDe">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#esIngredienteDe"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#regionOrigen -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#regionOrigen"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatosTipicos"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tienePrincipalA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tienePrincipalA">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#cantidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#cantidad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#peso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#peso"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aceite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aceite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Grasas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Achiote -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Achiote">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+        <rdfs:comment>Sirven para guisar o condimentar alimentos</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aguacate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aguacate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajiaco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajiaco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sopas"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Crema_De_Leche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Guascas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa_Criolla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_derivados"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz_atollado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz_atollado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Compuestos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Regular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aceite"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Costilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arveja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arveja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#BandejaPaisa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#BandejaPaisa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Compuestos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aguacate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carne_Molida"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chicharron"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chorizo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Frijol"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Huevo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Bicarbonato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Bicarbonato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Calado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Calado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_derivados"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#CaldoDePollo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#CaldoDePollo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldo_de_pollo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldo_de_pollo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tienePrincipalA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Presas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_blanca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldos">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldos"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sopas"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Callo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Callo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Res"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carne_Molida -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carne_Molida">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Res"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+        <rdfs:comment>Todos estos alimentos son ricos en proteínas. Los distintos tipos de carne y pescado tienen un valor nutritivo parecido. Así un huevo contiene 6 gramos de proteínas que es el contenido proteico de 30 gramos de carne. En la dieta mediterránea se consume más el pescado que la carne.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_Cabezona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_Cabezona">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_blanca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_blanca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_larga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_larga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_derivados -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_derivados">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Changua -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Changua">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_larga"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tienePrincipalA"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Leche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Huevo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Calado"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chicharron -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chicharron">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chorizo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chorizo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Comino_molido -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Comino_molido">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Compuestos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Compuestos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Costilla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Costilla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Crema_De_Leche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Crema_De_Leche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lacteos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fresa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fresa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Frijol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Frijol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+        <rdfs:comment>frutos comestibles obtenidos de plantas cultivadas o silvestres que, por su sabor generalmente dulce-acidulado, su aroma intenso y agradable y sus propiedades nutritivas, suelen consumirse mayormente en su estado fresco, como jugo o como postre frutos comestibles obtenidos de plantas cultivadas o silvestres que, por su sabor generalmente dulce-acidulado, su aroma intenso y agradable y sus propiedades nutritivas, suelen consumirse mayormente en su estado fresco, como jugo o como postre</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Grasas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Grasas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Guascas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Guascas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Guayaba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Guayaba">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Harina_Maiz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Harina_Maiz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Huevo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Huevo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatosTipicos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Jengibre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Jengibre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lacteos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lacteos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+        <rdfs:comment>La leche de vaca es uno de los alimentos más completos ya que en su composición entran prácticamente todos los nutrientes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Leche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Leche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lacteos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lechona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lechona">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arveja"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Manteca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#regionOrigen"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tolima"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#RegularR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Limonada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Limonada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maduro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maduro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_derivados"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_blanco -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_blanco">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_cartago -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_cartago">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_cascado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_cascado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_criollo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_criollo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_dulce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_dulce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_procesado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_procesado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Manteca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Manteca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Grasas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maracuya -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maracuya">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Mondongo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Mondongo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sopas"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Bicarbonato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Callo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_blanca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_larga"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_corriente"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Regular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Yuca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Mora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Mora">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_derivados"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa_Criolla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa_Criolla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pescado -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pescado">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_amarilla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_amarilla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_blanca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_blanca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_bomba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_bomba">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_corriente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_corriente">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_estrella -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_estrella">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_negra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_negra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pinton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pinton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatosTipicos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatosTipicos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatosTipicos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pollo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pollo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Presas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Presas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pollo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Region"/>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Regular -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Regular">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#RegularR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#RegularR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Res"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Res -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Res">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sancocho -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sancocho">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sopas"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Achiote"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_Cabezona"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_criollo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Regular"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#RegularR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Yuca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verde"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Presas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga_Santandereana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga_Santandereana">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Comino_molido"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#regionOrigen"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Santander"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Yuca"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tienePrincipalA"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sopas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sopas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#PlatoTipico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tamal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tamal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Compuestos"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Costilla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Harina_Maiz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tocino"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#tieneIngrediente"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Trozos"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#regionOrigen"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tolima"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tocino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tocino">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cerdo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate_de_arbol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate_de_arbol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Trozos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Trozos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pollo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Vainilla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Vainilla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verde -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verde">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Platano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ingredientes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Yuca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Yuca">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Santander -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Santander">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tolima -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tolima">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Region"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Aderezos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes_pescados_huevos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cereales_patatas_legumbres_frutossecos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fruta"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Grasas"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lacteos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verduras_hortalizas"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajiaco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Arroz_atollado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#BandejaPaisa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldo_de_pollo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Changua"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Lechona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Mondongo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sancocho"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga_Santandereana"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tamal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Ajo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_Cabezona"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_blanca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cebolla_larga"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Cilantro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Papa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Yuca"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Caldos"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Carnes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Compuestos"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chicharron"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Chorizo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Sobrebarriga"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Fresa"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Guayaba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Limonada"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maracuya"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Mora"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Tomate_de_arbol"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maduro"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pinton"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Verde"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_blanco"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_cartago"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_cascado"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_criollo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_dulce"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Maiz_procesado"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_amarilla"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_blanca"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_bomba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_corriente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_estrella"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/usuario/ontologies/2019/4/untitled-ontology-3#Pimienta_negra"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
