@@ -3,6 +3,77 @@ import time
 import cv2
 from PIL import Image
 
+def brillantes(im):
+    tiempoin=time.time()  
+    img=grises(im)
+    print(img.size[0]," _ ", img.size[1])
+    suma=0
+    ind=numpy.array(img)
+    distA_i=[]
+    distF_i=[]
+    distS_i=[]
+    
+    #indice de brillantes
+    """ i=0
+    while i< img.size[0]:
+        #recorremos filas
+        j = 0
+        ind.append([])
+        while j < img.size[1]:# reocrremos columnas
+            ind[i].append(img.getpixel((i,j))[0])
+            j+=1
+        i+=1
+     """
+     #calculamos A_i
+    i=0
+    while i< len(ind):
+        #recorremos filas
+        j = 0
+        distA_i.append([])
+        while j < len(ind[i]):# reocrremos columnas
+            #print(i," ",len(ind))
+            if(len(ind)-1==i):
+                distA_i[i].append((ind[i-1][j]+ind[i][j]+ind[0][j])/3)
+            else:
+                distA_i[i].append((ind[i-1][j]+ind[i][j]+ind[i+1][j])/3)    
+            j+=1
+        i+=1
+    #calculamos f_i
+    i=0
+    while i< len(distA_i):
+        #recorremos filas
+        j = 0
+        distF_i.append([])
+        while j < len(distA_i[i]):# reocrremos columnas
+            #print(i," ",len(ind))
+            if(len(distA_i)-1==i):
+                distF_i[i].append( (distA_i[i-1][j]-distA_i[i][j]) /2)
+            else:
+                distF_i[i].append((distA_i[i-1][j]-distA_i[i+1][j])/2)  
+            j+=1
+        i+=1
+    #calculamos s_i
+    i=0
+    while i< len(distF_i):
+        #recorremos filas
+        j = 0
+        distS_i.append([])
+        while j < len(distF_i[i]):# reocrremos columnas
+            #print(i," ",len(ind))
+            if(len(distF_i)-1==i):
+                distS_i[i].append( (distF_i[i-1][j]-distF_i[i][j]) //2)
+            else:
+                distS_i[i].append( (distF_i[i-1][j]-distF_i[i+1][j]) //2)
+            valor=int(distS_i[i][j])
+            img.putpixel((i,j),(valor,valor,valor))
+            j+=1
+        i+=1
+
+    
+    tiempofin=time.time() 
+    print("Fin brillantes ", tiempofin-tiempoin) 
+    return img
+
 def canny(ruta):
     tiempoin=time.time()    
     img = cv2.imread(ruta,0)
