@@ -1,6 +1,6 @@
-
 import time
 import cv2
+import numpy as np
 from PIL import Image
 
 def brillantes(im):
@@ -8,13 +8,14 @@ def brillantes(im):
     img=grises(im)
     print(img.size[0]," _ ", img.size[1])
     suma=0
-    ind=numpy.array(img)
+    #ind=np.array(img)
+    ind=[]
     distA_i=[]
     distF_i=[]
     distS_i=[]
     
     #indice de brillantes
-    """ i=0
+    i=0
     while i< img.size[0]:
         #recorremos filas
         j = 0
@@ -23,7 +24,7 @@ def brillantes(im):
             ind[i].append(img.getpixel((i,j))[0])
             j+=1
         i+=1
-     """
+    
      #calculamos A_i
     i=0
     while i< len(ind):
@@ -32,10 +33,10 @@ def brillantes(im):
         distA_i.append([])
         while j < len(ind[i]):# reocrremos columnas
             #print(i," ",len(ind))
-            if(len(ind)-1==i):
-                distA_i[i].append((ind[i-1][j]+ind[i][j]+ind[0][j])/3)
+            if(len(ind)-1==i or len(ind[i])-1==j   ):
+                distA_i[i].append((ind[i-1][j]+ind[i][j]+ind[0][j])/3+(ind[i][j-1]+ind[i][j]+ind[i][0])/3)
             else:
-                distA_i[i].append((ind[i-1][j]+ind[i][j]+ind[i+1][j])/3)    
+                distA_i[i].append((ind[i-1][j]+ind[i][j]+ind[i+1][j])/3+(ind[i][j-1]+ind[i][j]+ind[i][j+1])/3)    
             j+=1
         i+=1
     #calculamos f_i
@@ -46,10 +47,10 @@ def brillantes(im):
         distF_i.append([])
         while j < len(distA_i[i]):# reocrremos columnas
             #print(i," ",len(ind))
-            if(len(distA_i)-1==i):
-                distF_i[i].append( (distA_i[i-1][j]-distA_i[i][j]) /2)
+            if(len(distA_i)-1==i or len(distA_i[i])-1==j):
+                distF_i[i].append( (distA_i[i-1][j]-distA_i[i][j]) /2 + (distA_i[i][j-1]-distA_i[i][j]) /2)
             else:
-                distF_i[i].append((distA_i[i-1][j]-distA_i[i+1][j])/2)  
+                distF_i[i].append((distA_i[i-1][j]-distA_i[i+1][j])/2 + (distA_i[i][j-1]-distA_i[i][j+1])/2)  
             j+=1
         i+=1
     #calculamos s_i
@@ -60,12 +61,13 @@ def brillantes(im):
         distS_i.append([])
         while j < len(distF_i[i]):# reocrremos columnas
             #print(i," ",len(ind))
-            if(len(distF_i)-1==i):
-                distS_i[i].append( (distF_i[i-1][j]-distF_i[i][j]) //2)
+            if(len(distF_i)-1==i or len(distF_i[i])-1==j):
+                distS_i[i].append( (distF_i[i-1][j]-distF_i[i][j]) //4 + (distF_i[i][j-1]-distF_i[i][j]) //4 )
             else:
-                distS_i[i].append( (distF_i[i-1][j]-distF_i[i+1][j]) //2)
+                distS_i[i].append( (distF_i[i-1][j]-distF_i[i+1][j]) //4 + (distF_i[i][j-1]-distF_i[i][j+1]) //4  )
+            
             valor=int(distS_i[i][j])
-            img.putpixel((i,j),(valor,valor,valor))
+            img.putpixel((i,j),(valor,valor,0))
             j+=1
         i+=1
 

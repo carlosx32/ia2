@@ -2,13 +2,13 @@ import cv2
 import bordes
 from PIL import Image
 
-nombre="eric"
+nombre="IMG_1014"
 ext=".jpg"
 
 ruta=nombre+ext
 
 im = Image.open(ruta)
-
+im.save("resultado/0."+ruta)
 
 gris=bordes.grises(im)
 gris.save("resultado/1."+ruta)
@@ -27,13 +27,13 @@ canny=bordes.canny(ruta)
 
 brill= bordes.brillantes(im)
 brill.save("resultado/7.brillantes"+ruta)
-im.show()
-gris.show()
-fotoH.show()
-fotoV.show()
-grad.show()
-laplaciano.show()
-canny.show()
+#im.show()
+#gris.show()
+#fotoH.show()
+#fotoV.show()
+#grad.show()
+#laplaciano.show()
+#canny.show()
 
 brill.show()
 
